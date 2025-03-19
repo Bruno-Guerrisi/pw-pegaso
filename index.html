@@ -70,6 +70,59 @@
 
         </header>
 
+        <main>
+            <section class="my-hero">
+                <img src="./img/1150x650_LayoutPressRelease_Corporate.png" alt="">
+                <div class="container">
+                    <h1>Prysmin, la sostenibilità al primo posto!</h1>
+                    <button class="prysm-btn1" onclick="download">
+                        <a href="#download">Consulta i nostri report</a>
+                    </button>
+                </div>
+            </section>
+
+            <section class="highlights" id="highlights">
+                <h2 class="text-center mb-5">Highligths 2023</h2>
+                <div class="carousel-wrapper" ref="carouselWrapper">
+
+                    <button class="arrow left" @click="scrollLeft">&#10094;</button>
+                    <button class="arrow right" @click="scrollRight">&#10095;</button>
+                    
+                    <div
+                    class="carousel"
+                    @mousedown="startDrag"
+                    @mousemove="onDrag"
+                    @mouseup="endDrag"
+                    @mouseleave="endDrag"
+                    @touchstart="startDrag"
+                    @touchmove="onDrag"
+                    @touchend="endDrag"
+                    :style="{ transform: `translateX(${translateX}px)` }"
+                    ref="carousel"
+                    >
+                        <div v-for='(highlight, index) in highlights' :key="index" class="card mb-3">
+
+                            <div class="circle">
+                                <div class="arc" :style="getArcStyle(highlight.percentage)"></div>
+                                    <div class="inner-circle">
+                                        <span>{{ highlight.value }}</span>
+                                    </div>
+                            </div>
+                            <p class="text-center">{{ highlight.label }}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            
+
+            <div class="separator">
+                <div class="separator-line"></div>
+                <i class="fa-solid fa-seedling"></i>
+                <div class="separator-line"></div>
+            </div>
+        </main>
+
     </div>
 
     <!-- JS Vue -->
