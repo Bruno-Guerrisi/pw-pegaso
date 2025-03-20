@@ -206,7 +206,6 @@ div.card {
     align-items: center;
 }
 
-
 .arrow {
     position: absolute;
     top: 50%;
@@ -232,6 +231,24 @@ div.card {
 .arrow.right {
     right: 10px;
 }
+
+/* more-info section */
+.more-info-bg{
+    background-color: var(--primary-color);
+    color: var(--text-primary-color);
+}
+div.more-info-bg-2{
+    background-color: var(--tertiary-color);
+    color: var(--text-secondary-color);
+}
+.more-info-img img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 8/6;
+    object-position: center;
+}
+
 /* separator */
 .separator {
     display: flex;

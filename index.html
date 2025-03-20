@@ -114,11 +114,48 @@
                 </div>
 
             </section>
-            
 
             <div class="separator">
                 <div class="separator-line"></div>
                 <i class="fa-solid fa-seedling"></i>
+                <div class="separator-line"></div>
+            </div>
+
+            <section class="more-info" id="preview">
+
+                <div class="text-center ps-5 pe-5 m-3 mb-5">
+
+                    <h2>
+                        Il nostro impegno per un futuro sostenibile
+                    </h2>
+                    <p>
+                        Prysmian si impegna ogni giorno a costruire un mondo più sostenibile, riducendo l’impatto ambientale, investendo nell’innovazione e promuovendo il benessere delle persone e delle comunità. In questa pagina trovi i pilastri della nostra strategia di sostenibilità, i risultati raggiunti e le sfide che affrontiamo per contribuire attivamente alla transizione ecologica e sociale globale.
+                    </p>
+                </div>
+
+                <div class="more-info-bg pt-3 pb-3" 
+                    v-for="(preview, i) in previewText" 
+                    :key="i"
+                    :class="{'more-info-bg-2': preview.bgType === 2}">
+
+                    <div class="container">
+                        <div class=" row p-3 m-0"
+                        :class="{'flex-row-reverse align-self-end': preview.reverse === true}"
+                        :data-aos="preview.reverse ? 'fade-left' : 'fade-right'">
+                        <div class="col-md-8 p-2 ps-4 pe-4 col-sm-12">
+                            <h3>{{preview.title}}</h3>
+                            <p>{{preview.description}}</p>
+                        </div>
+                        <div class="more-info-img col-md-4 p-2 col-sm-12">
+                            <img :src="preview.img" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separator">
+                <div class="separator-line"></div>
+                <i class="fa-solid fa-file-arrow-down"></i>
                 <div class="separator-line"></div>
             </div>
         </main>
