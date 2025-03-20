@@ -24,7 +24,7 @@
 
         <header>
             <div class="logo">
-                <img src="./img/PRY.MI-1eef52ee.png" alt="logo">
+                <img src="./img/PRY.MI-1eef52ee.png" alt="logo prysmian">
             </div>
 
             <div>
@@ -53,13 +53,13 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
-                            <li class="nav-item">
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <a class="nav-link active" aria-current="page" href="#highlights">Highlights</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <a class="nav-link active" aria-current="page" href="#preview">Preview</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
                                 <a class="nav-link active" aria-current="page" href="#download">Download</a>
                             </li>
 
@@ -72,7 +72,7 @@
 
         <main>
             <section class="my-hero">
-                <img src="./img/1150x650_LayoutPressRelease_Corporate.png" alt="">
+                <img src="./img/1150x650_LayoutPressRelease_Corporate.png" alt="immagine sede prysmian">
                 <div class="container">
                     <h1>Prysmin, la sostenibilità al primo posto!</h1>
                     <button class="prysm-btn1" onclick="download">
@@ -147,7 +147,7 @@
                             <p>{{preview.description}}</p>
                         </div>
                         <div class="more-info-img col-md-4 p-2 col-sm-12">
-                            <img :src="preview.img" alt="">
+                            <img :src="preview.img" :alt="preview.title">
                         </div>
                     </div>
                 </div>
@@ -158,7 +158,59 @@
                 <i class="fa-solid fa-file-arrow-down"></i>
                 <div class="separator-line"></div>
             </div>
+
+            <section class="download-report" id="download">
+                <div class="container">
+
+                    <div class="row text-center mb-4">
+                        <h2>Download Report di Sostenibilità</h2>
+                        <p>Consulta e scarica i report ufficiali di sostenibilità di Prysmian, dal 2020 al 2023. Ogni documento raccoglie dati ambientali, sociali e di governance (ESG), illustrando in modo trasparente i risultati raggiunti, gli investimenti sostenibili e gli impegni futuri. Questi report rappresentano il nostro percorso verso un futuro più sostenibile, inclusivo e responsabile, allineato agli Obiettivi di Sviluppo Sostenibile delle Nazioni Unite.</p>
+                    </div>
+                    <div class="row report-row">
+
+                        <a class="link-report" href="./report/BilancioSost-2023-ITA-15-03-2024-FINAL_0.pdf">
+                            Report 2023
+                            <i class="fa-solid fa-download ms-2"></i>
+                        </a>
+
+                        <a class="link-report" href="./report/pr-2302-bil-sost-2022-ita-150dpi-web-compressed.pdf">
+                            Report 2022
+                            <i class="fa-solid fa-download ms-2"></i>
+                        </a>
+
+                        <a class="link-report" href="./report/DNF_ITA 2021_15.03.2022.pdf">
+                            Report 2021
+                            <i class="fa-solid fa-download ms-2"></i>
+                        </a>
+
+                        <a class="link-report" href="./report/Bilancio_di_sostenibilità_e_dichiarazione_consolidata_di_carattere_non-finanziario2020.pdf">
+                            Report 2020
+                            <i class="fa-solid fa-download ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
         </main>
+
+        <footer>
+            <div class="contaier">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <img class="logo-footer" src="./img/Prysmian_Logo.svg.png" alt="logo prysmian">
+                    </div>
+                    <div class="col-md-6 col-sm-12 contacts">
+                        <span>Contattaci</span>
+                        <div class="link-app">
+                            <img src="./img/youtube.png" alt="canale youtube">
+                            <img src="./img/facebook.png" alt="canale facebook">
+                            <img src="./img/x.png" alt="canale X">
+                            <img src="./img/instagram.png" alt="canale instagram">
+                            <img src="./img/linkedin.png" alt="canale linkedin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </div>
 
