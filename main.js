@@ -149,7 +149,7 @@ new Vue({
             };
         },
         
-        // Funzione per iniziare il trascinamento del carosello
+        // Funzione per iniziare il trascinamento del carosell
         startDrag(event) {
             this.isDragging = true;
             // Salva la posizione iniziale in base al tipo di evento (mouse o touch)
